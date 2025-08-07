@@ -7,7 +7,7 @@ const app = express();
 app.use(express.json());
 app.use("/api", schoolRoutes);
 
-const PORT = 8080;
+const PORT = process.env.PORT || 8080;
 
 mongoose
   .connect(process.env.MONGO_URI)
